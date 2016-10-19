@@ -1,0 +1,151 @@
+$gop-color: #d2492a;
+$dem-color: #00a1de;
+$tbd-color: #bbb;
+$split-color: #774A8A;
+$font-family: Lato, Helvetica, Arial;
+
+html, body {
+	margin: 0;
+	padding: 0;
+	min-width: 700px;
+}
+
+header {
+	background-color: #777;
+	padding: 20px 30px;
+}
+
+h1 {
+	font-family: $font-family;
+	font-weight: 300;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#scoreboard {
+	margin: 40px 0px;
+	max-with: 1200px;
+}
+
+.votes-bar-wrapper {
+	position: relative;
+	margin: 30px 30px;
+	height: 40px;
+}
+
+.votes-bar {
+	height: 40px;
+	float: left;
+	transition: 0.25s;
+	text-align: center;
+	font-family: $font-family;
+	line-height: 40px;
+}
+
+.halfway-triangle {
+	position: absolute;
+	left: calc(50% - 10px);
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+.top-triangle {
+	top: -10px;
+	border-top: 10px solid #000;
+}
+
+.bottom-triangle {
+	bottom: -10px;
+	border-bottom: 10px solid #000;
+}
+
+.votes-count {
+	color: #fff;
+}
+
+#dem-votes-bar {
+	width: calc( (0/538) * 100%);
+	background-color: $dem-color;
+}
+
+#tbd-votes-bar {
+	width: calc( (538/538) * 100% );
+	background-color: $tbd-color;
+}
+
+#gop-votes-bar {
+	width: calc( (0/538) * 100%);
+	background-color: $gop-color;
+}
+
+.message-wrapper {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	padding: 10px;
+    text-align: center;
+    margin: 20px 30px;
+    font-family: Helvetica;
+    font-size: 1.25em;
+    color: #000;
+    transition: 0.25s;
+    &.dem-victory {
+    	background-color: $dem-color;
+    	border-color: $dem-color;
+    	color: #fff;
+    }
+    &.gop-victory {
+    	background-color: $gop-color;
+    	border-color: $gop-color;
+    	box-sizing: content-box;
+    	color: #fff;
+    }
+    &.electoral-tie {
+    	background-color: $split-color;
+    	border-color: $split-color;
+    	box-sizing: content-box;
+    	color: #fff;
+    }
+}
+
+.map-wrapper {
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+#map {
+	padding: 50px 0px;
+}
+
+.no-select {
+	pointer-events: none;
+	user-select: none;
+	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;   
+}
+
+#labels-layer {
+	font-family: $font-family;  
+}
+
+.state, .district {
+	transition: 0.25s;
+	stroke: #fff;
+	stroke-width: 1px;
+	&.dem {
+		fill: $dem-color;
+	}
+	&.gop {
+		fill: $gop-color;
+	}
+	&.tbd {
+		fill: $tbd-color;
+	}
+	&.split {
+		fill: purple;
+	}
+}

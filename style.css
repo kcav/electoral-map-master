@@ -1,0 +1,121 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: 700px; }
+
+header {
+  background-color: #19406b;
+  padding: 30px 30px  20px 30px; }
+
+h1 {
+  font-family: Lato, Helvetica, Arial;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+  padding: 0; 
+  text-align:center;
+  line-height: .9em;}
+
+#scoreboard {
+  margin: 40px 0px; }
+
+.votes-bar-wrapper {
+  position: relative;
+  margin: 30px 30px;
+  height: 40px; }
+
+.votes-bar {
+  height: 40px;
+  float: left;
+  transition: 0.25s;
+  text-align: center;
+  font-family: Lato, Helvetica, Arial;
+  line-height: 40px; }
+
+.halfway-triangle {
+  position: absolute;
+  left: calc(50% - 10px);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent; }
+
+.top-triangle {
+  top: -10px;
+  border-top: 10px solid #000; }
+
+.bottom-triangle {
+  bottom: -10px;
+  border-bottom: 10px solid #000; }
+
+.votes-count {
+  color: #fff; }
+
+#dem-votes-bar {
+  width: calc( (196/538) * 100%);
+  background-color: #00A1de; }
+
+#tbd-votes-bar {
+  width: calc( (151/538) * 100% );
+  background-color: #bbb; }
+
+#gop-votes-bar {
+  width: calc( (191/538) * 100%);
+  background-color: #d2492a; }
+
+.message-wrapper {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin: 20px 30px;
+  font-family: Lato;
+  font-size: 1.25em;
+  color: #000;
+  transition: 0.25s; }
+  .message-wrapper.dem-victory {
+    background-color: #00A1de;
+    border-color: #00A1de;
+    color: #fff; }
+  .message-wrapper.gop-victory {
+    background-color: #d2492a;
+    border-color: #d2492a;
+    box-sizing: content-box;
+    color: #fff; }
+  .message-wrapper.electoral-tie {
+    background-color: #774A8A;
+    border-color: #774A8A;
+    box-sizing: content-box;
+    color: #fff; }
+
+.map-wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
+
+#map {
+  padding: 50px 0px; }
+
+.no-select {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+#labels-layer {
+  font-family: Lato, Helvetica, Arial; }
+
+.state, .district {
+  transition: 0.25s;
+  stroke: #fff;
+  stroke-width: 1px; }
+  .state.dem, .district.dem {
+    fill: #00A1de; }
+  .state.gop, .district.gop {
+    fill: #d2492a; }
+  .state.tbd, .district.tbd {
+    fill: #bbb; }
+  .state.split, .district.split {
+    fill: purple; }
+
+/*# sourceMappingURL=style.css.map */
